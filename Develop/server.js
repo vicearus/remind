@@ -18,5 +18,6 @@ app.get("/api/notes", (req, res) => res.json(dbData))
 app.get('/notes', (req, res) =>
 res.sendFile((`${__dirname}/public/notes.html`)));
 
+const port = process.env.PORT || 3001
 
-app.listen(3001, () => console.log("Listening on http://localhost:3001"));
+app.listen(port, () => console.log("Listening on http://localhost:3001"));
